@@ -21,3 +21,13 @@ stages:
               backendAzureRmStorageAccountName: 'infrapipeline002'
               backendAzureRmContainerName: 'infracontainer'
               backendAzureRmKey: 'terraform.tfstate'
+          - task: TerraformTask@5
+            inputs:
+              provider: 'azurerm'
+              command: 'plan'
+              environmentServiceNameAzureRM: 'infrapipeline'
+          - task: TerraformTask@5
+            inputs:
+              provider: 'azurerm'
+              command: 'apply'
+              environmentServiceNameAzureRM: 'infrapipeline'
