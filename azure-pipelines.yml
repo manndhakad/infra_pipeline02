@@ -6,9 +6,11 @@ trigger:
 pool: infrapipeline
 
 stages:
-  - stage: 
+  - stage:
+    displayName: Terraform Infra Pipeline
     jobs:
-      - job: 
+      - job:
+        displayName: Terraform init plan
         steps:
           - task: TerraformInstaller@1
             inputs:
