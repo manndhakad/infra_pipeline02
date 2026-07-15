@@ -29,7 +29,8 @@ stages:
               command: 'plan'
               environmentServiceNameAzureRM: 'infrapipeline'
 
-  - stage: 
+  - stage:
+    displayName: TerraformApply
     jobs:
       - job: 
         steps:
