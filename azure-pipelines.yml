@@ -12,7 +12,10 @@ stages:
       - job:
         displayName: Terraform init plan
         steps:
-          
+          - task: tfsec@1
+            inputs:
+              version: 'v1.26.0'
+              dir: 'infra_pipeline02'
           - task: TerraformInstaller@1
             inputs:
               terraformVersion: 'latest'
