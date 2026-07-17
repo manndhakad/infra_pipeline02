@@ -32,10 +32,10 @@ stages:
               provider: 'azurerm'
               command: 'plan'
               environmentServiceNameAzureRM: 'infrapipeline'
-          - task: ManualValidation@1
+          - task: ManualIntervention@8
             inputs:
-              notifyUsers: 'vikasrai.tech@gmail.com'
-              approvers: 'vikasrai.tech@gmail.com'
+              instructions: 'vikasrai.tech@gmail.com'
+              emailRecipients: 'vikasrai.tech@gmail.com'
 
   - stage: InfraStage2
     displayName: TerraformApply
