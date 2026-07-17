@@ -15,7 +15,6 @@ stages:
           - task: tfsec@1
             inputs:
               version: 'v1.26.0'
-              dir: 'C:\Users\satya\Downloads\agent\_work\1\s\infra_pipeline02'
           - task: TerraformInstaller@1
             inputs:
               terraformVersion: 'latest'
